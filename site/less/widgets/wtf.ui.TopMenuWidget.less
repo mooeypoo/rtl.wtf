@@ -1,0 +1,88 @@
+.wtf-ui-topMenuWidget {
+	width: 100%;
+	background-color: #ffffff;
+	top: 0.5em;
+	position: fixed;
+
+	-webkit-box-shadow: 0 0 0.5em 0 rgba(5, 5, 5, 0.2);
+	-moz-box-shadow:    0 0 0.5em 0 rgba(5, 5, 5, 0.2);
+	box-shadow:         0 0 0.5em 0 rgba(5, 5, 5, 0.2);
+
+	&-logo {
+		display: inline-block;
+		font-size: 1.5em;
+		margin-left: 0.5em;
+		// Rotate
+		-o-transform: rotate(-10deg);
+		-ms-transform: rotate(-10deg);
+		-moz-transform: rotate(-10deg);
+		-webkit-transform: rotate(-10deg);
+		transform: rotate(-10deg);
+		// Transition
+		-webkit-transition: transform 1s;
+		-moz-transition: transform 1s;
+		-o-transition: transform 1s;
+		transition: transform 1s;
+
+		.wtf-ui-topMenuWidget:hover & {
+			-o-transform: rotate(10deg);
+			-ms-transform: rotate(10deg);
+			-moz-transform: rotate(10deg);
+			-webkit-transform: rotate(10deg);
+			transform: rotate(10deg);
+		}
+
+		.oo-ui-labelElement-label {
+			// We have to override the base (and very
+			// specific) styles of the oojs-ui button
+			color: #009bde !important;
+		}
+	}
+
+	&-menu {
+		display: inline-block;
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+
+		li {
+			display: inline-block;
+			padding: 0.6em 1em;
+			text-transform: uppercase;
+			margin-left: 1px;
+			margin-right: 1px;
+
+			&:hover {
+				border-left: 1px #ccc solid;
+				border-right: 1px #ccc solid;
+				margin-left: 0;
+				margin-right: 0;
+				background-color: #f7f7f7;
+			}
+
+			a {
+				color: #333333;
+				text-decoration: none;
+
+				&:hover {
+					color: #000000;
+				}
+			}
+		}
+	}
+
+	&-edge {
+		float: left;
+		margin: 0.2em 0.5em;
+
+		a {
+			// Override ooui styles
+			font-size: 0.8em !important;
+		}
+
+		&-button-selected a {
+			// Override ooui styles
+			background-color: #BCE7F5 !important;
+		}
+	}
+}

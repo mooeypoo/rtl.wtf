@@ -1,0 +1,34 @@
+body {
+	direction: rtl;
+	font-family: 'Open Sans', sans-serif;
+	color: #333333;
+	background-color: #e5e5e5;
+	padding: 0.5em 0;
+	margin: 0;
+}
+
+.wtf {
+	&-rtl {
+		/* @noflip */
+		direction: rtl;
+	}
+
+	&-ltr {
+		/* @noflip */
+		direction: ltr;
+	}
+
+	&-clear {
+		clear: both;
+	}
+}
+
+.wtf-page {
+	&-main {
+		margin: 4em;
+	}
+}
+
+@import 'widgets/wtf.ui.TopMenuWidget.less';
+@import 'widgets/wtf.ui.TitleWidget.less';
+@import 'widgets/wtf.ui.PageSectionWidget.less';

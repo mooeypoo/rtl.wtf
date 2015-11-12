@@ -1,0 +1,8 @@
+{
+	"require": {
+		"oojs/oojs-ui": "*"
+	},
+	"autoload": {
+		"classmap": [ "includes" ]
+	}
+}
