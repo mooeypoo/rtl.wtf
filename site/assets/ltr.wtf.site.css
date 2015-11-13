@@ -1,0 +1,180 @@
+body {
+  direction: ltr;
+  font-family: 'Open Sans', sans-serif;
+  color: #333333;
+  background-color: #e5e5e5;
+  padding: 0.5em 0;
+  margin: 0;
+}
+@media only screen and (max-width: 480px), only screen and (min-width: 480px) and (max-width: 700px) {
+  body {
+    font-size: 0.8em;
+  }
+  body .youtube-embed {
+    display: none;
+  }
+}
+.wtf-rtl {
+  /* @noflip */
+  direction: rtl;
+}
+.wtf-ltr {
+  /* @noflip */
+  direction: ltr;
+}
+.wtf-clear {
+  clear: both;
+}
+.wtf-page-main {
+  margin: 4em;
+}
+.wtf-ui-topMenuWidget {
+  width: 100%;
+  background-color: #ffffff;
+  top: 0.5em;
+  position: fixed;
+  -webkit-box-shadow: 0 0 0.5em 0 rgba(5, 5, 5, 0.2);
+  -moz-box-shadow: 0 0 0.5em 0 rgba(5, 5, 5, 0.2);
+  box-shadow: 0 0 0.5em 0 rgba(5, 5, 5, 0.2);
+}
+.wtf-ui-topMenuWidget-menuWrapper {
+  display: inline-block;
+}
+.wtf-ui-topMenuWidget-hamburger {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 0.5em;
+  background: url(images/icon-hamburger.svg) no-repeat center;
+  width: 1.75em;
+  height: 1.75em;
+}
+.wtf-ui-topMenuWidget-logo {
+  display: inline-block;
+  font-size: 1.5em;
+  margin-right: 0.5em;
+  -o-transform: rotate(-10deg);
+  -ms-transform: rotate(-10deg);
+  -moz-transform: rotate(-10deg);
+  -webkit-transform: rotate(-10deg);
+  transform: rotate(-10deg);
+  -webkit-transition: transform 1s;
+  -moz-transition: transform 1s;
+  -o-transition: transform 1s;
+  transition: transform 1s;
+}
+.wtf-ui-topMenuWidget:hover .wtf-ui-topMenuWidget-logo {
+  -o-transform: rotate(10deg);
+  -ms-transform: rotate(10deg);
+  -moz-transform: rotate(10deg);
+  -webkit-transform: rotate(10deg);
+  transform: rotate(10deg);
+}
+.wtf-ui-topMenuWidget-logo .oo-ui-labelElement-label {
+  color: #009bde !important;
+}
+.wtf-ui-topMenuWidget-menu {
+  display: inline-block;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.wtf-ui-topMenuWidget-menu li {
+  display: inline-block;
+  padding: 0.6em 1em;
+  text-transform: uppercase;
+  margin-right: 1px;
+  margin-left: 1px;
+}
+.wtf-ui-topMenuWidget-menu li:hover {
+  border-right: 1px #ccc solid;
+  border-left: 1px #ccc solid;
+  margin-right: 0;
+  margin-left: 0;
+  background-color: #f7f7f7;
+}
+.wtf-ui-topMenuWidget-menu li a {
+  color: #333333;
+  text-decoration: none;
+}
+.wtf-ui-topMenuWidget-menu li a:hover {
+  color: #000000;
+}
+.wtf-ui-topMenuWidget-edge {
+  float: right;
+  margin: 0.2em 0.5em;
+}
+.wtf-ui-topMenuWidget-edge a {
+  font-size: 0.8em !important;
+}
+.wtf-ui-topMenuWidget-edge-button-selected a {
+  background-color: #BCE7F5 !important;
+}
+@media only screen and (max-width: 480px), only screen and (min-width: 480px) and (max-width: 700px) {
+  .wtf-ui-topMenuWidget {
+    top: 0;
+  }
+  .wtf-ui-topMenuWidget-hamburger {
+    display: inline-block;
+  }
+  .wtf-ui-topMenuWidget-menu {
+    display: none;
+  }
+  .wtf-ui-topMenuWidget:hover .wtf-ui-topMenuWidget-menuWrapper {
+    display: block;
+    text-align: center;
+  }
+  .wtf-ui-topMenuWidget:hover .wtf-ui-topMenuWidget-hamburger {
+    display: none;
+  }
+  .wtf-ui-topMenuWidget:hover .wtf-ui-topMenuWidget-menu {
+    display: block;
+  }
+  .wtf-ui-topMenuWidget:hover .wtf-ui-topMenuWidget-menu li {
+    display: block;
+  }
+  .wtf-ui-topMenuWidget:hover .wtf-ui-topMenuWidget-menu li:hover {
+    border-top: 1px #ccc solid;
+    border-bottom: 1px #ccc solid;
+    border-right: 0;
+    border-left: 0;
+    margin-top: -1px;
+    margin-bottom: -1px;
+  }
+}
+.wtf-ui-titleWidget {
+  font-weight: bolder;
+  width: 100%;
+  color: rgba(77, 77, 77, 0.8);
+  text-shadow: -1px -4px 6px #dedede, 0 0 0 #000, 1px 4px 6px #dedede;
+}
+.wtf-ui-titleWidget-size-large {
+  font-size: 2.5em;
+  text-align: center;
+}
+.wtf-ui-titleWidget-size-medium {
+  font-size: 2em;
+}
+.wtf-ui-titleWidget-size-normal {
+  font-size: 1.5em;
+}
+.wtf-ui-pageSectionWidget {
+  margin: 0.5em 0;
+}
+.wtf-ui-pageSectionWidget:hover .wtf-ui-pageSectionWidget-wrapper {
+  background-color: rgba(245, 245, 245, 0.5);
+}
+.wtf-ui-pageSectionWidget:hover .wtf-ui-pageSectionWidget-badge {
+  display: inline-block;
+}
+.wtf-ui-pageSectionWidget-wrapper {
+  padding: 0.5em;
+}
+.wtf-ui-pageSectionWidget-badge {
+  display: none;
+  float: right;
+  color: #0090CF !important;
+  font-size: 0.8em;
+  font-weight: bold;
+  margin-right: -2.5em;
+}

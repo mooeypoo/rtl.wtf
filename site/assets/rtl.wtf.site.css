@@ -10,6 +10,9 @@ body {
   body {
     font-size: 0.8em;
   }
+  body .youtube-embed {
+    display: none;
+  }
 }
 .wtf-rtl {
   /* @noflip */
@@ -43,8 +46,8 @@ body {
   right: 50%;
   top: 0.5em;
   background: url(images/icon-hamburger.svg) no-repeat center;
-  width: 1.5em;
-  height: 1.5em;
+  width: 1.75em;
+  height: 1.75em;
 }
 .wtf-ui-topMenuWidget-logo {
   display: inline-block;

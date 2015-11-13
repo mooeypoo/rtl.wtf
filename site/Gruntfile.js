@@ -19,7 +19,7 @@ module.exports = function ( grunt ) {
 			},
 			dist: {
 				files: {
-					'assets/ltr.wtf.site.css': 'src/assets/rtl.wtf.site.css'
+					'assets/ltr.wtf.site.css': 'assets/rtl.wtf.site.css'
 				}
 			}
 		},
@@ -35,5 +35,5 @@ module.exports = function ( grunt ) {
 
 	} );
 
-	grunt.registerTask( 'default', [ 'less', 'csslint', 'cssjanus' ] );
+	grunt.registerTask( 'default', [ 'less', 'cssjanus', 'csslint' ] );
 };

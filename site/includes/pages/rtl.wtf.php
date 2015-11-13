@@ -26,9 +26,9 @@ echo new RTLWTF\PageSectionWidget( array(
 			"<ul>" .
 			"<li>\"<a href=\"https://commons.wikimedia.org/wiki/File:Nothing_Left_but_Always_Right_-_The_Twisted_Road_to_RTL_Support.pdf\">Nothing Left but Always Right - The Twisted Road to RTL Support</a>\" (Presentation slides)</li>" .
 			"<li>\"<a href=\"http://moriel.smarterthanthat.com/tips/the-language-double-take-dealing-with-bidirectional-text-or-wait-tahw/\">The Language Double-Take: Dealing with Bidirectional Text (or: Wait, ?tahW)</a>\"</li>" .
-			"<li>The recording of the talk is available here:<br />" .
+			"<li>A <a href=\"https://www.youtube.com/watch?v=qmLdHuFRGgM\">recording of the 2015 Tech Talk</a> is also available<br />" .
 				// Youtube video
-				"<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/qmLdHuFRGgM\" frameborder=\"0\" allowfullscreen></iframe>" .
+				"<iframe class=\"youtube-embed\" width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/qmLdHuFRGgM\" frameborder=\"0\" allowfullscreen></iframe>" .
 			"</li>" .
 			"</ul>" .
 		"</p>",
