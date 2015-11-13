@@ -29,10 +29,12 @@ echo new RTLWTF\TopMenuWidget( array(
 		"items" => array(
 			new OOUI\ButtonWidget( array(
 				'label' => 'LTR',
+				'disabled' => ( $sitedir === 'ltr' ),
 				'href' => '?' . http_build_query( array_merge( $query, array( 'dir' => 'ltr' ) ) ),
 			) ),
 			new OOUI\ButtonWidget( array(
 				'label' => 'RTL',
+				'disabled' => ( $sitedir === 'rtl' ),
 				'href' => '?' . http_build_query( array_merge( $query, array( 'dir' => 'rtl' ) ) ),
 			) ),
 		)

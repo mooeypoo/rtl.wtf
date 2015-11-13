@@ -20,7 +20,16 @@ class TopMenuWidget extends \OOUI\Widget {
 
 		$menu = new \OOUI\Tag( 'ul' );
 		$menu->addClasses( array( 'wtf-ui-topMenuWidget-menu' ) );
+
+		// Add a hamburger menu position for smaller screens
+		$hamburger = new \OOUI\Tag( 'div' );
+		$hamburger->addClasses( array( 'wtf-ui-topMenuWidget-hamburger' ) );
+
 		$this->mixin( new \OOUI\GroupElement( $this, array_merge( $config, array( 'group' => $menu ) ) ) );
+
+		$menuWrapper = new \OOUI\Tag( 'div' );
+		$menuWrapper->addClasses( array( 'wtf-ui-topMenuWidget-menuWrapper' ) );
+		$menuWrapper->appendContent( $hamburger, $menu );
 
 		// Logo
 		$logo = new \OOUI\Tag( 'div' );
@@ -49,6 +58,7 @@ class TopMenuWidget extends \OOUI\Widget {
 				$items[] = $li;
 			}
 			$this->addItems( $items );
+
 		}
 
 		// Edge
@@ -71,7 +81,7 @@ class TopMenuWidget extends \OOUI\Widget {
 			$edge->appendContent( $edgeButtons, $clearDiv );
 		}
 
-		$this->appendContent( $logo, $menu, $edge );
+		$this->appendContent( $logo, $edge, $menuWrapper );
 		$this->addClasses( array( 'wtf-ui-topMenuWidget' ) );
 	}
 }

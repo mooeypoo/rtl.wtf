@@ -5,11 +5,11 @@ module.exports = function ( grunt ) {
 	grunt.loadNpmTasks( 'grunt-cssjanus' );
 
 	grunt.initConfig( {
-		pkg: grunt.file.readJSON( 'package.json' ),	
+		pkg: grunt.file.readJSON( 'package.json' ),
 		less: {
 			production: {
 				files: {
-					'assets/rtl.wtf.site.css': 'less/rtl.wtf.site.less'
+					'assets/rtl.wtf.site.css': 'src/less/rtl.wtf.site.less'
 				}
 			}
 		},
@@ -19,7 +19,7 @@ module.exports = function ( grunt ) {
 			},
 			dist: {
 				files: {
-					'assets/ltr.wtf.site.css': 'assets/rtl.wtf.site.css'
+					'assets/ltr.wtf.site.css': 'src/assets/rtl.wtf.site.css'
 				}
 			}
 		},

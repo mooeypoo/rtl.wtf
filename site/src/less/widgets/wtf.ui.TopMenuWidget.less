@@ -8,10 +8,25 @@
 	-moz-box-shadow:    0 0 0.5em 0 rgba(5, 5, 5, 0.2);
 	box-shadow:         0 0 0.5em 0 rgba(5, 5, 5, 0.2);
 
+	&-menuWrapper {
+		display: inline-block;
+	}
+
+	&-hamburger {
+		display: none;
+		position: absolute;
+		right: 50%;
+		top: 0.5em;
+		background: url(images/icon-hamburger.svg) no-repeat center;
+		width: 1.5em;
+		height: 1.5em;
+	}
+
 	&-logo {
 		display: inline-block;
 		font-size: 1.5em;
 		margin-left: 0.5em;
+
 		// Rotate
 		-o-transform: rotate(-10deg);
 		-ms-transform: rotate(-10deg);
@@ -83,6 +98,48 @@
 		&-button-selected a {
 			// Override ooui styles
 			background-color: #BCE7F5 !important;
+		}
+	}
+
+	@media @smallscreen, @mediumscreen {
+		top: 0;
+
+		&-hamburger {
+			display: inline-block;
+		}
+
+		&-menu {
+			display: none;
+		}
+
+		&:hover {
+			.wtf-ui-topMenuWidget {
+				&-menuWrapper {
+					display: block;
+					text-align: center;
+				}
+
+				&-hamburger {
+					display: none;
+				}
+
+				&-menu {
+					display: block;
+
+					li {
+						display: block;
+
+						&:hover {
+							border-top: 1px #ccc solid;
+							border-bottom: 1px #ccc solid;
+							border-left: 0;
+							border-right: 0;
+							margin-top: -1px;
+							margin-bottom: -1px;
+						}
+					}
+				}
+			}
 		}
 	}
 }

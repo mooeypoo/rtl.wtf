@@ -2,8 +2,9 @@
 
 namespace RTLWTF;
 
-class TextWidget extends \OOUI\LabelWidget {
+class TextWidget extends \OOUI\Widget {
 	protected $dir;
+	protected $label;
 
 	/**
 	 * @param array $config Configuration options
@@ -16,8 +17,13 @@ class TextWidget extends \OOUI\LabelWidget {
 		$this->dir = \SITE_DIR;
 		if ( isset( $config["dir"] ) ) {
 			$this->dir = $config["dir"];
+			$this->addClasses( array( 'wtf-' . $this->dir ) );
 		}
 
-		$this->addClasses( array( 'wtf-' . $this->dir ) );
+		if ( isset( $config["label"] ) ) {
+			$this->label = $config["label"];
+		}
+
+		$this->appendContent( $this->label );
 	}
 }

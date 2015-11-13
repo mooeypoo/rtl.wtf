@@ -6,6 +6,11 @@ body {
   padding: 0.5em 0;
   margin: 0;
 }
+@media only screen and (max-width: 480px), only screen and (min-width: 480px) and (max-width: 700px) {
+  body {
+    font-size: 0.8em;
+  }
+}
 .wtf-rtl {
   /* @noflip */
   direction: rtl;
@@ -28,6 +33,18 @@ body {
   -webkit-box-shadow: 0 0 0.5em 0 rgba(5, 5, 5, 0.2);
   -moz-box-shadow: 0 0 0.5em 0 rgba(5, 5, 5, 0.2);
   box-shadow: 0 0 0.5em 0 rgba(5, 5, 5, 0.2);
+}
+.wtf-ui-topMenuWidget-menuWrapper {
+  display: inline-block;
+}
+.wtf-ui-topMenuWidget-hamburger {
+  display: none;
+  position: absolute;
+  right: 50%;
+  top: 0.5em;
+  background: url(images/icon-hamburger.svg) no-repeat center;
+  width: 1.5em;
+  height: 1.5em;
 }
 .wtf-ui-topMenuWidget-logo {
   display: inline-block;
@@ -89,6 +106,38 @@ body {
 }
 .wtf-ui-topMenuWidget-edge-button-selected a {
   background-color: #BCE7F5 !important;
+}
+@media only screen and (max-width: 480px), only screen and (min-width: 480px) and (max-width: 700px) {
+  .wtf-ui-topMenuWidget {
+    top: 0;
+  }
+  .wtf-ui-topMenuWidget-hamburger {
+    display: inline-block;
+  }
+  .wtf-ui-topMenuWidget-menu {
+    display: none;
+  }
+  .wtf-ui-topMenuWidget:hover .wtf-ui-topMenuWidget-menuWrapper {
+    display: block;
+    text-align: center;
+  }
+  .wtf-ui-topMenuWidget:hover .wtf-ui-topMenuWidget-hamburger {
+    display: none;
+  }
+  .wtf-ui-topMenuWidget:hover .wtf-ui-topMenuWidget-menu {
+    display: block;
+  }
+  .wtf-ui-topMenuWidget:hover .wtf-ui-topMenuWidget-menu li {
+    display: block;
+  }
+  .wtf-ui-topMenuWidget:hover .wtf-ui-topMenuWidget-menu li:hover {
+    border-top: 1px #ccc solid;
+    border-bottom: 1px #ccc solid;
+    border-left: 0;
+    border-right: 0;
+    margin-top: -1px;
+    margin-bottom: -1px;
+  }
 }
 .wtf-ui-titleWidget {
   font-weight: bolder;
