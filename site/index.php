@@ -9,9 +9,7 @@ $display = $page;
 if ( strlen( $display) === 0 ) {
 	$display = 'rtl.wtf';
 } ?>
-<div class="wtf-page-main">
 	<?php require_once "includes/pages/" . $display . ".php"; ?>
-</div>
 <?php
 // Bottom
 require_once "includes/pieces/page_toolbars.php";

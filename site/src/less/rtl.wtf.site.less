@@ -1,4 +1,5 @@
 @import 'rtl.wtf.site.variables.less';
+@import 'rtl.wtf.site.mixins.less';
 
 body {
 	direction: rtl;
@@ -33,12 +34,8 @@ body {
 	}
 }
 
-.wtf-page {
-	&-main {
-		margin: 4em;
-	}
-}
-
+@import 'widgets/wtf.ui.PageOutputWidget.less';
 @import 'widgets/wtf.ui.TopMenuWidget.less';
 @import 'widgets/wtf.ui.TitleWidget.less';
 @import 'widgets/wtf.ui.PageSectionWidget.less';
+@import 'widgets/wtf.ui.SidebarWidget.less';

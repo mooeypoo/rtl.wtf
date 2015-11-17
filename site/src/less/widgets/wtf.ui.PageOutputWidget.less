@@ -1,0 +1,14 @@
+.wtf-ui-pageOutputWidget {
+	padding: 4em 0 @page-margin @page-margin;
+
+	&-page {
+		display: inline-block;
+		padding-right: ~"calc( " @sidebar-pos ~"+" @sidebar-width ~"+" @page-margin ~")";
+		box-sizing: border-box;
+		width: 100%;
+
+		@media @smallscreen, @mediumscreen {
+			padding-right: @page-margin;
+		}
+	}
+}

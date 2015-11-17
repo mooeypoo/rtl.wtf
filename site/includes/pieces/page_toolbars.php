@@ -1,16 +1,21 @@
 <?php
-// Top menu
+// Variables
 $query = array( "dir" => SITE_DIR );
 if ( isset( $page ) && strlen( $page ) > 0 ) {
 	$query['p'] = $page;
 }
 
+// Top menu
 echo new RTLWTF\TopMenuWidget( array(
 	"logo" => array(
 		"label" => '<' . $sitedir . '.wtf>',
 		"href" => 'http://' . $sitedir . '.wtf/' . ( count( $query) > 0 ? '?' . http_build_query( $query ) : '' ),
 	),
 	"menu" => array(
+		array(
+			"label" => "Mental Model",
+			"link" => "?" . http_build_query( array_merge( $query, array( 'p' => 'model' ) ) ),
+		),
 		array(
 			"label" => "Typing",
 			"link" => "?" . http_build_query( array_merge( $query, array( 'p' => 'typing' ) ) ),
@@ -40,6 +45,4 @@ echo new RTLWTF\TopMenuWidget( array(
 		)
 	),
 ) );
-
-// Bottom menu
 ?>

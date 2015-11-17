@@ -1,3 +1,8 @@
+.mixin-shadowed-block {
+  -webkit-box-shadow: 0 0 0.5em 0 rgba(5, 5, 5, 0.2);
+  -moz-box-shadow: 0 0 0.5em 0 rgba(5, 5, 5, 0.2);
+  box-shadow: 0 0 0.5em 0 rgba(5, 5, 5, 0.2);
+}
 body {
   direction: ltr;
   font-family: 'Open Sans', sans-serif;
@@ -6,7 +11,7 @@ body {
   padding: 0.5em 0;
   margin: 0;
 }
-@media only screen and (max-width: 480px), only screen and (min-width: 480px) and (max-width: 700px) {
+@media only screen and (max-width: 480px), only screen and (min-width: 480px) and (max-width: 750px) {
   body {
     font-size: 0.8em;
   }
@@ -25,17 +30,28 @@ body {
 .wtf-clear {
   clear: both;
 }
-.wtf-page-main {
-  margin: 4em;
+.wtf-ui-pageOutputWidget {
+  padding: 4em 1em 1em 0;
+}
+.wtf-ui-pageOutputWidget-page {
+  display: inline-block;
+  padding-left: calc(  0.5em + 200px + 1em );
+  box-sizing: border-box;
+  width: 100%;
+}
+@media only screen and (max-width: 480px), only screen and (min-width: 480px) and (max-width: 750px) {
+  .wtf-ui-pageOutputWidget-page {
+    padding-left: 1em;
+  }
 }
 .wtf-ui-topMenuWidget {
-  width: 100%;
-  background-color: #ffffff;
-  top: 0.5em;
-  position: fixed;
   -webkit-box-shadow: 0 0 0.5em 0 rgba(5, 5, 5, 0.2);
   -moz-box-shadow: 0 0 0.5em 0 rgba(5, 5, 5, 0.2);
   box-shadow: 0 0 0.5em 0 rgba(5, 5, 5, 0.2);
+  background-color: #ffffff;
+  width: 100%;
+  top: 0.5em;
+  position: fixed;
 }
 .wtf-ui-topMenuWidget-menuWrapper {
   display: inline-block;
@@ -110,7 +126,7 @@ body {
 .wtf-ui-topMenuWidget-edge-button-selected a {
   background-color: #BCE7F5 !important;
 }
-@media only screen and (max-width: 480px), only screen and (min-width: 480px) and (max-width: 700px) {
+@media only screen and (max-width: 480px), only screen and (min-width: 480px) and (max-width: 750px) {
   .wtf-ui-topMenuWidget {
     top: 0;
   }
@@ -147,6 +163,11 @@ body {
   width: 100%;
   color: rgba(77, 77, 77, 0.8);
   text-shadow: -1px -4px 6px #dedede, 0 0 0 #000, 1px 4px 6px #dedede;
+  margin-top: -3.5em;
+}
+.wtf-ui-titleWidget-type-page {
+  padding-top: 0;
+  margin-top: -2.5em;
 }
 .wtf-ui-titleWidget-size-large {
   font-size: 2.5em;
@@ -158,8 +179,12 @@ body {
 .wtf-ui-titleWidget-size-normal {
   font-size: 1.5em;
 }
+.wtf-ui-titleWidget a[name] {
+  display: inline-block;
+  padding-top: 3.5em;
+}
 .wtf-ui-pageSectionWidget {
-  margin: 0.5em 0;
+  margin: 0.5em 0 3.5em 0;
 }
 .wtf-ui-pageSectionWidget:hover .wtf-ui-pageSectionWidget-wrapper {
   background-color: rgba(245, 245, 245, 0.5);
@@ -177,4 +202,32 @@ body {
   font-size: 0.8em;
   font-weight: bold;
   margin-right: -2.5em;
+}
+.wtf-ui-sidebarWidget {
+  -webkit-box-shadow: 0 0 0.5em 0 rgba(5, 5, 5, 0.2);
+  -moz-box-shadow: 0 0 0.5em 0 rgba(5, 5, 5, 0.2);
+  box-shadow: 0 0 0.5em 0 rgba(5, 5, 5, 0.2);
+  background-color: #ffffff;
+  position: fixed;
+  border-radius: 0.5em;
+  width: 200px;
+  left: 0.5em;
+  top: 4em;
+  box-sizing: border-box;
+}
+@media only screen and (max-width: 480px), only screen and (min-width: 480px) and (max-width: 750px) {
+  .wtf-ui-sidebarWidget {
+    display: none;
+  }
+}
+.wtf-ui-sidebarWidget-menu {
+  display: block;
+}
+.wtf-ui-sidebarWidget-menu > .oo-ui-buttonWidget {
+  display: block;
+  padding: 0.5em;
+  opacity: 0.8;
+}
+.wtf-ui-sidebarWidget-menu > .oo-ui-buttonWidget:hover {
+  opacity: 1;
 }

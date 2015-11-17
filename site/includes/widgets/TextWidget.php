@@ -5,6 +5,7 @@ namespace RTLWTF;
 class TextWidget extends \OOUI\Widget {
 	protected $dir;
 	protected $label;
+	protected $anchor;
 
 	/**
 	 * @param array $config Configuration options
@@ -22,6 +23,18 @@ class TextWidget extends \OOUI\Widget {
 
 		if ( isset( $config["label"] ) ) {
 			$this->label = $config["label"];
+		}
+
+		if ( isset( $config["anchor"] ) ) {
+			$this->anchor = new \OOUI\Tag( 'a' );
+			$this->anchor->setAttributes( array(
+				'name' => $config["anchor"],
+			) );
+			$this->appendContent( $this->anchor );
+		}
+
+		// Anchor
+		if ( $config['label'] ) {
 		}
 
 		$this->appendContent( $this->label );

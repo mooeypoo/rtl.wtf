@@ -1,6 +1,14 @@
 .wtf-ui-titleWidget {
 	font-weight: bolder;
 	width: 100%;
+	color: rgba(77, 77, 77, 0.8);
+	text-shadow: 1px 4px 6px #dedede, 0 0 0 #000, 1px 4px 6px #dedede;
+	margin-top: -@anchor-padding-top;
+
+	&-type-page {
+		padding-top: 0;
+		margin-top: -2.5em;
+	}
 
 	&-size {
 		&-large {
@@ -17,7 +25,8 @@
 		}
 	}
 
-
-	color: rgba(77, 77, 77, 0.8);
-    text-shadow: 1px 4px 6px #dedede, 0 0 0 #000, 1px 4px 6px #dedede;
+	a[name] {
+		display: inline-block;
+		padding-top: @anchor-padding-top;
+	}
 }
