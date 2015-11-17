@@ -4,9 +4,11 @@
 	width: 100%;
 	top: 0.5em;
 	position: fixed;
+	display: table-row;
 
 	&-menuWrapper {
-		display: inline-block;
+		display: table-cell;
+		width: 100%;
 	}
 
 	&-hamburger {
@@ -20,7 +22,7 @@
 	}
 
 	&-logo {
-		display: inline-block;
+		display: table-cell;
 		font-size: 1.5em;
 		margin-left: 0.5em;
 
@@ -84,7 +86,8 @@
 	}
 
 	&-edge {
-		float: left;
+		display: table-cell;
+		padding-left: 0.5em;
 		margin: 0.2em 0.5em;
 
 		a {

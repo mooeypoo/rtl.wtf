@@ -81,7 +81,7 @@ class TopMenuWidget extends \OOUI\Widget {
 			$edge->appendContent( $edgeButtons, $clearDiv );
 		}
 
-		$this->appendContent( $logo, $edge, $menuWrapper );
+		$this->appendContent( $logo, $menuWrapper, $edge );
 		$this->addClasses( array( 'wtf-ui-topMenuWidget' ) );
 	}
 }

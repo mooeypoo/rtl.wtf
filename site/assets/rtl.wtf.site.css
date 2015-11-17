@@ -52,9 +52,11 @@ body {
   width: 100%;
   top: 0.5em;
   position: fixed;
+  display: table-row;
 }
 .wtf-ui-topMenuWidget-menuWrapper {
-  display: inline-block;
+  display: table-cell;
+  width: 100%;
 }
 .wtf-ui-topMenuWidget-hamburger {
   display: none;
@@ -66,7 +68,7 @@ body {
   height: 1.75em;
 }
 .wtf-ui-topMenuWidget-logo {
-  display: inline-block;
+  display: table-cell;
   font-size: 1.5em;
   margin-left: 0.5em;
   -o-transform: rotate(-10deg);
@@ -117,7 +119,8 @@ body {
   color: #000000;
 }
 .wtf-ui-topMenuWidget-edge {
-  float: left;
+  display: table-cell;
+  padding-left: 0.5em;
   margin: 0.2em 0.5em;
 }
 .wtf-ui-topMenuWidget-edge a {
@@ -185,6 +188,8 @@ body {
 }
 .wtf-ui-pageSectionWidget {
   margin: 0.5em 0 3.5em 0;
+  width: calc( 100% - 2em );;
+  box-sizing: content-box;
 }
 .wtf-ui-pageSectionWidget:hover .wtf-ui-pageSectionWidget-wrapper {
   background-color: rgba(245, 245, 245, 0.5);
