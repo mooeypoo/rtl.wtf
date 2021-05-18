@@ -1,0 +1,119 @@
+# History of Right-to-Left
+
+Browsers are pretty smart. They know how to render complex media and weirdly innovative HTML5 and CSS3 (4, soon?) magical elements. They are also fairly fast, with their internal tricks that make them consider how to plan out and render the page for the user. Today, we can do right-to-left text online. Of course, as you can see from this entire website, we are still struggling with exactly how to render it, especially when dealing with mixed content directionality, but the fact that we can do it is, in itself, a huge step forward.
+
+That's not the way things always behaved.
+
+<!-- more -->
+
+<figure id="attachment_28" aria-describedby="caption-attachment-28" style="width: 300px" class="wp-caption alignright"><img data-attachment-id="28" data-permalink="http://ltr.wtf/explained/rtl-support-history/attachment/old_computers/" data-orig-file="https://i1.wp.com/rtl.wtf/wp-content/uploads/2015/12/Old_computers.jpg?fit=1024%2C768" data-orig-size="1024,768" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="Old_computers" data-image-description="" data-medium-file="https://i1.wp.com/rtl.wtf/wp-content/uploads/2015/12/Old_computers.jpg?fit=300%2C225" data-large-file="https://i1.wp.com/rtl.wtf/wp-content/uploads/2015/12/Old_computers.jpg?fit=640%2C480" loading="lazy" class="size-medium wp-image-28" src="https://i1.wp.com/rtl.wtf/wp-content/uploads/2015/12/Old_computers.jpg?resize=300%2C225" alt="Courtesy of Leif K-Brooks, Wikimedia Commons" width="300" height="225" srcset="https://i1.wp.com/rtl.wtf/wp-content/uploads/2015/12/Old_computers.jpg?resize=300%2C225 300w, https://i1.wp.com/rtl.wtf/wp-content/uploads/2015/12/Old_computers.jpg?w=1024 1024w" sizes="(max-width: 300px) 100vw, 300px" data-recalc-dims="1" /><figcaption id="caption-attachment-28" class="wp-caption-text">Credit: <a href="https://commons.wikimedia.org/wiki/File:Old_computers.jpg">Leif K-Brooks</a>, Wikimedia Commons, CC-BY-SA</figcaption></figure>
+<h2>Computers are smart. But also dumb.</h2>
+<p>Computers are [wikilookup title=&#8221;Intelligence&#8221;]smart, but they're also dumb. They don't (yet?) understand context very well, and they don't quite yet understand the intention behind the code they're given. All they know is that there is a string of instructions which they carry out.</p>
+<p>When computers were invented, all they knew was English. ASCII ruled, and if you had any other language you wanted to type or view in, you were out of luck. Pretty quickly, though, after computers became more widespread, this changed, and foreigners with non-Latin languages and scripts could join in on the computerized fun. With the introduction of the internet, more and more foreign languages wanted in on the fun, and that included Right-to-Left languages.</p>
+<p>Now that I have probably sent a bunch of Hardware Engineers into a fit of rage by over-simplifying computer history, let me move on to the point.</p>
+<h2>Browsers are smart. But also dumb.</h2>
+<p>Let's go back to over-simplifying things, for the sake of, well, simplicity. Let's assume we are using a very simple browser. An old one, say, from the days of the internet-dinosaurs, when you needed a modem to send its digital information to the server, through the landlines, using analog chirping sounds. Those were the days.</p>
+<p>Our good ol' browser didn't know much other than basic rendering of text. It displayed text, really, more or less reading the htm pages in sequence and displaying them with some flourishes, like &#8216;bold' and &#8216;italics' and &#8216;underline'.</p>
+<p>When it came down to it, the browser (computers in general, really) started from its own coordinate origin (top left corner, of course) and spat out the page. Text was relatively easy &#8212; the letters were simply printed out in sequence. &#8220;Hello world!&#8221; was displayed plainly, and the netizens rejoiced. We ended up adding media (images) and some more fancy markup like the amazingly over-used &#8220;marquee&#8221; tag. It was great. And it worked under the same principles. Start from (0, 0) and draw the page. It was efficient, smart and useful.</p>
+<p>Except for Right-to-Left, that is.</p>
+<h2>Displaying text in sequence</h2>
+<p>Let's continue our simplified experiment, for a moment, and pretend that the browser just reads and displays text, ignoring all the fancy markup.</p>
+<p>Here's the very over-simplified not-accurate but more-or-less correct sequence:</p>
+<ul>
+<li>Our page has &#8220;Hello world!&#8221; in it.</li>
+<li>The browser begins at its point of origin &#8212; the top-left corner.</li>
+<li>The browser reads the text from the text's point of origin as well: from the left, and towards the right.</li>
+<li>Each letter is displayed in sequence, moving &#8220;forward&#8221; on the axis (towards the right)</li>
+<li>&#8220;Hello world!&#8221; is displayed.</li>
+<li>Everyone speaking English can read it.</li>
+</ul>
+<p>Now, let's take a Right-to-Left language. By design, it is written from right to left. What Left-to-Right people would call &#8220;Backwards&#8221;. The word &#8220;Hello&#8221; would be typed, in sequence, H-e-l-l-o, but from Right-to-left, it actually appears, visually, as &#8220;olleH&#8221; in the text. So, considering that, let's check our process:</p>
+<ul>
+<li>Our page has &#8220;Shalom world!&#8221; in it, in Right-to-Left language. Visually, it looked like &#8220;!dlrow molahS&#8221;</li>
+<li>The browser begins at its point of origin &#8212; the top-left corner.</li>
+<li>The browser reads the text from what it considers the text's point of origin: from the left, and towards the right</li>
+<li>Each letter is displayed in sequence, moving &#8220;forward&#8221; on the axis (towards the right)</li>
+<li>&#8220;!dlrow molahS&#8221; is displayed.</li>
+<li>Right-to-Left users are dismayed.</li>
+<li>Everyone learns to read backwards.</li>
+</ul>
+<p>This drove Right-to-Left-thinking webmasters into fits of frenzy. Their pages were all backwards, and that just couldn't do.</p>
+<p>Being the innovative creature we are, humans thought of ways to overcome this issue. In an age where both computers and browsers had no concept of reading things &#8220;right to left&#8221;, the Right-to-Left crowd came up with the most effective solution it could:</p>
+<h2>Flip everything</h2>
+<p>Imagine our previous scenario. We already know that the computer reads our Right-to-Left text &#8220;backwards&#8221;.</p>
+<p>All we have to do, then, is <strong>write it backwards, so the computer reads it backwards-backwards, and renders it forwards</strong>.</p>
+<p>Right-to-Left geniusness. SRSLY.</p>
+<p>Let's go over our example:</p>
+<ul>
+<li>Our page has &#8220;Shalom world!&#8221; in it, in Right-to-Left language. Visually, it looked like &#8220;!dlrow molahS&#8221;</li>
+<li>Our webmaster talentfully rewrites this to say &#8220;!dlrow molahS&#8221; in the Right-to-Left language, backwards. Visually, it looked like &#8220;Shalom world!&#8221;</li>
+<li>The browser begins at its point of origin &#8212; the top-left corner.</li>
+<li>The browser reads the text from what it considers the text's point of origin: from the left, and towards the right.</li>
+<li>Each letter is displayed in sequence, moving &#8220;forward&#8221; on the axis (towards the right)</li>
+<li>&#8220;Shalom world!&#8221; is displayed.</li>
+<li>Right-to-Left users can read normally</li>
+<li>Right-to-Left webmasters get severe case of vertigo</li>
+<li>Everyone rejoices</li>
+</ul>
+<p>This may sound funny, but this actually worked, and it was the way things worked for a while on the web.</p>
+<p>In order to create a web page in Right-to-Left language, you had to post your text into the .htm page <strong>backwards</strong>. In fact, it was so popular to work this way, that there popped actual internet tools that can let you flip the text automatically so you don't have to mess with it. Some of those are still <a href="http://www.eliram.com/tools/flipheb.html">live</a> <a href="http://www.textreverse.com/">today</a>.</p>
+<p><em>In fact, there are still, up to this day and despite the multiple advancements that we've had in rendering right-to-left text online, <a href="http://superuser.com/questions/720977/maintaining-word-order-when-copying-hebrew-from-and-se-site-to-ms-word">online</a> <a href="http://www.accordancebible.com/forums/topic/11068-reverse-order-of-exported-hebrew-and-syriac-unicode-texts/">discussions</a> and <a href="http://www.modernketubah.com/article_reverse_hebrew.php">tools</a> about un-reversing text that was copied from the internet and into a word processor (mostly MS Word). Yes. It's still a thing.</em></p>
+<h3>The order of elements on the page</h3>
+<p>Writing things backwards wasn't just about the text itself. The entire page, for Right-to-Left users, was reversed. In the main page of this site I mentioned the &#8220;Mental model&#8221; of Right-to-Left users and this is a crucial concept (I will go into this concept a bit more in depth in a future post.) The main idea is that Right-to-Left users are not just reading and writing &#8220;backwards,&#8221; they also think Right-to-Left. The concept of &#8220;start&#8221; is on the right, rather than the left, and that affects the way we expect to see content.</p>
+<p>Right-to-Left users expect the logo and sidebar, for example, to be on the right side, because our eyes are drawn there automatically.</p>
+<p>Why does that matter? Well, let's say you write a new blank html page. You have nice div elements that define your content area and your sidebar area. If you are a Left-to-Right user, this structure would mostly do: [sidebar] [content]. You write the sidebar first, the content after, and get&#8230; the sidebar first (on the left) and the content after (on the right)</p>
+<p>But for Right-to-Left users, the structure should be [content] [sidebar]. This means that the page itself must be &#8220;backwards&#8221; to begin with. It also means that if you are building a site that should have content for both English and, say, Hebrew speakers, you have to write two different html pages for each structure. One would be [content] [sidebar] and one [sidebar] [content] &#8212; and that's before you got into the issue of writing the actual text backwards.</p>
+<p>We'll talk about this issue later in this post. Also, probably, in more posts to come, because this is one of the issues that is not quite completely properly solved yet, even today.</p>
+<p>But let's go back to our simplified example. Right now, we're only talking about text. The text that was written backwards, so it will be rendered forwards.</p>
+<h2>Advancement: Logical vs Visual</h2>
+<p>At some point, writing backwards became a really big issue. For one, it's pretty difficult to write backwards, even with automatic tools, and it makes editing a page extremely annoying. It made the work on websites that had to be regularly updated (like news sites) very frustrating.</p>
+<p>Another issue that came up was handling several Right-to-Left languages that couldn't really be written backwards properly, like Arabic. Arabic, unlike Hebrew, uses symbols that &#8220;connect&#8221; together to form complex letters inside the word. When you write them backwards, those connections are lost, and the language gets completely mangled, to the level of not being readable.</p>
+<p>There was a need to make things a little bit better for Right-to-Left websites.</p>
+<p>Unicode was already in use, but its [wikilookup title=&#8221;Bidirectional algorithm&#8221;]Bidirectional Algorithm wasn't quite developed and widespread yet. Instead, people started using a new, special, font, that displays RTL (especially Hebrew and Arabic) in its correct direction from right to left.</p>
+<p>They called that method &#8220;Logical,&#8221; because it displayed the language in its logical direction. The good old &#8220;flipped&#8221; writing method was now referred to as &#8220;Visual.&#8221;</p>
+<p>When you wrote your html, you had to embed your special font, and choose the content ordering. Hebrew websites were the main ones to use this method, but the terms &#8220;visual&#8221; and &#8220;logical&#8221; remain as a very important aspect of Right-to-Left work online, and are used to explain differences in rendering and typing to this day. We'll deal with those examples in depth in a future post, as well.</p>
+<p>The internet was full of weird Hebrew fonts to download and embed. You sometimes had to go to your browser's settings and manually flip from &#8220;Hebrew: Visual&#8221; to &#8220;Hebrew: Logical&#8221; if the browser didn't recognize the default rendering of the site. It was the era of reading things backwards and flipping things on purpose. Hebrew was, logically, werbeH, but not visually.</p>
+<p>The official w3c Internationalization Group wrote a statement about the differences and uses of &#8220;Logical&#8221; vs. &#8220;Visual&#8221; ordering. This is what <a href="http://www.w3.org/International/questions/qa-visual-vs-logical">their website has to say</a> on the subject in 2013, way way after this was popular in the 90s:</p>
+<blockquote><p>You should always create HTML (and any other type of markup) using logical ordering, and never use visual.</p>
+<p><dfn id="term_visualordering">Visual ordering</dfn> of text was a common way of representing Hebrew in HTML on old user agents that didn't support the <a class="termref" href="http://www.w3.org/International/tutorials/bidi-xhtml/#term_uba">Unicode bidirectional algorithm</a>. Relatively little persists today. Characters making up the text were stored in the source code in the same order you would see them displayed on screen when looking from left to right.</p>
+<p>(Visual ordering less common for Arabic. Since the Arabic letters are all joined up there was a stronger motivation on the part of Arabic implementers to enable the logical ordering approach. Visually ordered Arabic text may use separate code points for each shaped glyph.)</p>
+<p>With <dfn id="term_logicalordering">logical ordering</dfn>, text is stored in memory in the order in which it would normally be typed (and usually pronounced). The [wikilookup title=&#8221;Bidirectional algorithm&#8221;]Unicode bidirectional algorithm is then applied by the browser, at display time, to produce the correct visual display.</p></blockquote>
+<p>This issue was specifically created for displaying Right-to-Left languages online back in &#8220;the day&#8221;, but it is still relevant for typing and selecting stuff, so don't chuck away those terms as obsolete just yet.</p>
+<h2>Advancement: rendering directionality</h2>
+<p>So, great, now we have a way to type Right-to-Left logically (without having to write it backwards) and the browser knows to render properly on the screen. That's great. Thanks, Browser!</p>
+<p>But that's not quite enough. I know, I know, give me a finger, I want the whole left-handed hand&#8230; But that's how we are, we want more. More support for Right-to-Left languages, and specifically, we'd really like it if we could display pages in a &#8220;right to left&#8221; logic without writing the elements themselves backwards.</p>
+<p>As I mentioned above, Right-to-Left websites had to flip the content structure of their pages, as well. Displaying the text itself logically is helping, but it's not solving the entire issue. A Right-to-Left page isn't just about writing backwards, it's also about presenting the page elements &#8220;backwards&#8221; (forwards to us, thankyouverymuch). You can see it here in rtl.wtf, in fact &#8212; isn't it beautiful!?</p>
+<p>So, SRSLY browser, we can do it with text, we should be able to do it with html elements, right?</p>
+<p>Enter the &#8216;dir' property.</p>
+<p>The <a href="http://www.w3.org/International/questions/qa-html-dir">direction property</a> tells the browser we are now entering a certain directionality for the rendering of the page.</p>
+<p>In very broad (and very simplified) terms, it basically tells the browser that its origin of axes is different. When you write dir=&#8221;rtl&#8221; in your html tag, the browser now knows that instead of defining its origin on the top-left, where forward is to the right, it now flips its model to define the origin on the top-right, and the forward direction towards the left.</p>
+<p>Writing html in sequence, then, works: [sidebar] [content] in dir=&#8221;ltr&#8221; will display as [sidebar][content] but if it is wrapped with dir='rtl' it will be rendered as [content][sidebar], and we don't need to rebuild our actual html page.</p>
+<p>Right-to-Left website designers were happy.</p>
+<p>&#8230; Until they started making websites that were multi lingual.</p>
+<h2>Multi-lingual sites and mixing langauges and directions</h2>
+<p>So after this whole history lesson, let's go back to the beginning: Computers are smart. But also dumb. To solve the issue of Right-to-Left scripts and rendering online, we had to come up with something a little better than playing flip-the-text with the browser.</p>
+<p>What happens if my website has a mixture of both Right-to-Left and Left-to-Right languages? This might seem unnecessary, but it's actually very common. Most articles on the English Wikipedia, for example, include the original name or term in the first paragraph of the article, in its original language. That may well be a Right-to-Left language. Another example are educational websites that include snippets of original text (poems, stories, news reports, etc) in English with later paragraphs or explanations in Hebrew or Arabic or Farsi.</p>
+<p>Chatting is another example where mixed directionality exists. People colloquially use English words, emoticons, and internet slang even in non-latin languages. The term &#8220;lol&#8221; for instance, is used extensively in foreign languages, so does &#8220;rofl,&#8221; &#8220;wtf,&#8221; and, occasionally, &#8220;meh.&#8221;</p>
+<p>Right-to-Left users type those things into their chat boxes even when the entire chat is, otherwise, Right-to-Left. What do we do with these? How does the browser know what to display? Should it be logical or visual? If it's logical, what do we do with a sentence that contains strings that have different logical directionalities? OMG HOW DO WE CHAT ONLINE??</p>
+<h2>Solution: Unicode Bidirectional Algorithm</h2>
+<p>It turns out, there's a solution to this problem too. At least a partial, for-the-most-part-pretty-great solution with only the occasional issues, and in the world of only Right-to-Left, &#8220;only occasional issues&#8221; is a Very Good Thing.</p>
+<p>Cue the [wikilookup title=&#8221;Bidirectional algorithm&#8221;]Unicode Bidirectional Algorithm. This is the standard that we now use to define how languages of different directionalities are presented online, and how they behave when they interact with contexts that are of the opposite direction. It is also the standard that tries to give the browser its missing context.</p>
+<p>As we said before, browsers (and computers) don't yet understand context, they only know their instructions. Sometimes, however, especially when writing languages online, we want to make sure the browser is on the same page as we are in terms of the directionality context it is given, so it can handle cases where the general rule of direction is less rigid, like when dealing with strings of numbers, or when writing punctuation.</p>
+<p>For example, if the browser has a concept of dir=&#8221;rtl&#8221; which, simplifying things, tells it &#8220;your origin is now on the top-right,&#8221; and the browser also understands how to display RTL languages logically, without having to write them backwards, then writing a whole website in Hebrew is a breeze. We have no need to define different contexts, because it's all a single context. We have no need to make the browser understand when to render logically RTL and when logically-LTR because there is no LTR. Simple websites are usually very easy to handle, which is why most people who never dealt with RTL before have no concept of the issues. For them, there is only one context. And in the context of their LTR-only websites, they are correct.</p>
+<p>But writing a whole website in Hebrew and then including some English gets us in some directionality trouble. Will the English be backwards? Will the Hebrew? Who says what happens? How will the browser know?</p>
+<p>That's what the <strong><a href="http://unicode.org/reports/tr9/">Unicode Bidirectional Algorithm</a></strong> dictates, and for the most part, it does a pretty decent job of it.</p>
+<h3>Character types and explicit directionalities</h3>
+<p>One of the most important and effective functions of the [wikilookup title=&#8221;Bidirectional algorithm&#8221;]Unicode Bidirectional Algorithm is its definition of character types. It defines characters into three main groups: strong type, weak type and neutral type. The strong types has a defined directionality, while the weak types are affected by the direction of whatever strong type comes before them. The neutral types are mostly punctuation, which is unaffected by any directionality.</p>
+<p>This may sound extremely confusing, but it boils down to a very important concept &#8212; alphabet is strong. It is usually either Right-to-Left or it is Left-to-Right, and so it affects the content that is within it. This allows the browser to understand the context of the direction it is dealing with. If you write a sentence in English, it will be Left-to-Right. If you start writing a sentence in Hebrew, the context is Right-to-Left. If either of those sentences has ambiguous characters in it (like punctuation or numbers) they will be affected by the context that wraps them.</p>
+<p>It's pretty brilliant, and it solves a bunch of problems with typing, reading and rendering text online.</p>
+<p>It also creates a bunch of problems of its own, but what doesn't, right?</p>
+<h3>But wait, there's (loads and loads) more</h3>
+<p>In any case, the Unicode Bidirectional Algorithm (BiDi algorithm) is one of the most important concepts in Right-to-Left behavior online, and deserves its own post. Perhaps even several posts. I will definitely not do it justice by writing about it in a small section of a post about the history of RTL.</p>
+<p>I am planning a few posts about BiDi and its magic (and flaws) so if that interests you, please stay tuned.</p>
+<p>For now, you can also read <a href="http://moriel.smarterthanthat.com/tips/the-language-double-take-dealing-with-bidirectional-text-or-wait-tahw/">my original animated-gif-filled post about BiDi and directionality</a>, that includes a full explanation with some useful practical examples of typing and selecting on the web.</p>
+<h2>We can haz RTL</h2>
+<p>So there you have it &#8211; the general process that brought about supporting Right-to-Left languages online. This is not the whole story, because we're not done. But this is the point of this website &#8212; to feature the good parts, the bad parts, the funny parts and the sad parts of supporting Right-to-Left languages online.</p>
+<p>But one thing is certain.</p>
+<p>We can haz RTL.</p>
+<p>At least we can have that.</p>
+<p>Until next time, Right-to-Left responsibly.</p>
