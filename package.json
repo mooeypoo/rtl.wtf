@@ -18,6 +18,7 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "@vuepress/theme-default": "^1.8.2",
     "vuepress": "^1.5.3",
     "vuepress-plugin-social-share": "^1.0.0",
     "vuepress-theme-default-rtl": "^1.0.1"
