@@ -7,12 +7,12 @@
     "name": "Moriel Schottlender",
     "email": "moriel@gmail.com"
   },
-  "repository": "https://github.com/mooeypoo/rtl.wtf/rtl.wtf",
+  "repository": "https://github.com/mooeypoo/rtl.wtf",
   "scripts": {
-    "dev:ltr": "vuepress dev src",
-    "dev:ltr": "SITE_DIR=ltr vuepress dev src",
-    "dev:rtl": "SITE_DIR=rtl vuepress dev src",
+    "dev": "vuepress dev src",
     "build": "vuepress build src",
+    "netlify:rtl": "SITE_DIR=rtl netlify dev",
+    "netlify:ltr": "SITE_DIR=ltr netlify dev",
     "build:ltr": "SITE_DIR=ltr vuepress build src",
     "build:rtl": "SITE_DIR=rtl vuepress build src"
   },
