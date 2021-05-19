@@ -1,6 +1,7 @@
 const { description } = require('../../package')
 
 module.exports = {
+  theme: process.env.SITE_DIR === 'ltr' ? '' : 'default-rtl',
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */

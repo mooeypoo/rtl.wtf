@@ -9,12 +9,17 @@
   },
   "repository": "https://github.com/mooeypoo/rtl.wtf/rtl.wtf",
   "scripts": {
-    "dev": "vuepress dev src",
-    "build": "vuepress build src"
+    "dev:ltr": "vuepress dev src",
+    "dev:ltr": "SITE_DIR=ltr vuepress dev src",
+    "dev:rtl": "SITE_DIR=rtl vuepress dev src",
+    "build": "vuepress build src",
+    "build:ltr": "SITE_DIR=ltr vuepress build src",
+    "build:rtl": "SITE_DIR=rtl vuepress build src"
   },
   "license": "MIT",
   "devDependencies": {
     "vuepress": "^1.5.3",
-    "vuepress-plugin-social-share": "^1.0.0"
+    "vuepress-plugin-social-share": "^1.0.0",
+    "vuepress-theme-default-rtl": "^1.0.1"
   }
 }
