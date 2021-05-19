@@ -39,10 +39,10 @@ module.exports = {
         text: 'RTL Explained',
         link: '/explained/',
       },
-      // {
-      //   text: 'Config',
-      //   link: '/config/'
-      // },
+      {
+        text: 'Contact',
+        link: '/contact/'
+      },
       // {
       //   text: 'VuePress',
       //   link: 'https://v1.vuepress.vuejs.org'
