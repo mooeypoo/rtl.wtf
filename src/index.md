@@ -4,12 +4,13 @@ home: true
 tagline: Read the web like Right-to-Left readers do, and learn about the challenges — and how to help solve them.
 actionText: Get Started →
 actionLink: /intro/
-# features:
-# - title: Feature 1 Title
-#   details: Feature 1 Description
-# - title: Feature 2 Title
-#   details: Feature 2 Description
-# - title: Feature 3 Title
-#   details: Feature 3 Description
+features:
+- title: Learn
+  details: Learn about Right-to-Left language support, why it's important, and what the best practices are
+- title: Switch
+  details: Switch the website directionality from LTR to RTL at any point
+- title: Experience
+  details: Experience the web in reverse; play with Right to Left features (and anti-features) the way many users do
+footerHtml: true
 footer: Made with ❤️ by Moriel Schottlender
 ---
