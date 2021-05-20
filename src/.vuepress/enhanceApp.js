@@ -5,6 +5,7 @@
  */
 import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css';
+import '@mdi/font/css/materialdesignicons.css'
 
 export default ({
   Vue, // the version of Vue being used in the VuePress app
@@ -16,6 +17,7 @@ export default ({
   Vue.use(Vuetify, {});
   options.vuetify = new Vuetify({
     rtl: SITE_IS_RTL, // from DefinePlugin in config.js
+    iconfont: 'mdi',
     theme: {
       primary: '#1976D2',
       secondary: '#424242',
