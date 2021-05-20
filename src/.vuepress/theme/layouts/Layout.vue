@@ -65,4 +65,8 @@ export default {
 .footer-vuetify-app .v-application--wrap {
   min-height: auto !important;
 }
+
+main.page {
+  padding-bottom: 4rem;
+}
 </style>
