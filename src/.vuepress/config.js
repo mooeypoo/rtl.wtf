@@ -1,4 +1,5 @@
 const { description } = require('../../package')
+const webpack = require('webpack');
 
 module.exports = {
   theme: process.env.SITE_DIR === 'ltr' ? '' : 'default-rtl',
@@ -45,7 +46,7 @@ module.exports = {
         link: '/contact/'
       },
       // {
-      //   text: 'VuePress',
+      //   text: process.env.SITE_DIR === 'ltr' ? '[ CHANGE TO RTL ]' : '[ CHANGE TO LTR ]',
       //   link: 'https://v1.vuepress.vuejs.org'
       // }
     ],
@@ -63,9 +64,9 @@ module.exports = {
       ],
       // fallback
       '/': [
-        // '',        /* / */
-        // 'contact', /* /contact.html */
-        // 'about'    /* /about.html */
+        '',
+        '/contact/',
+        '/intro/'
       ]
     }
   },
@@ -74,7 +75,12 @@ module.exports = {
       alias: {
         '@images': 'images'
       }
-    }
+    },
+    plugins: [
+      new webpack.DefinePlugin({
+        SITE_IS_RTL: process.env.SITE_DIR !== 'ltr'
+      })
+    ]
   },
   /**
    * Apply plugins，ref：https://v1.vuepress.vuejs.org/zh/plugin/

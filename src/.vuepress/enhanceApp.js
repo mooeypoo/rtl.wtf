@@ -15,6 +15,7 @@ export default ({
   // ...apply enhancements for the site.
   Vue.use(Vuetify, {});
   options.vuetify = new Vuetify({
+    rtl: SITE_IS_RTL, // from DefinePlugin in config.js
     theme: {
       primary: '#1976D2',
       secondary: '#424242',
