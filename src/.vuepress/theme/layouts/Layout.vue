@@ -49,7 +49,7 @@ export default {
       return SITE_IS_RTL ? 'mdi-arrow-right-bold' : 'mdi-arrow-left-bold'
     },
     switchButtonText () {
-      return SITE_IS_RTL ? 'Switch content to LTR' : 'Switch content to RTL'
+      return SITE_IS_RTL ? 'This breaks my brain. Switch to LTR!' : 'Give me the RTL experience!'
     },
     switchButtonClass () {
       return SITE_IS_RTL ? 'text-left' : 'text-right'
