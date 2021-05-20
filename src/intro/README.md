@@ -1,3 +1,7 @@
+---
+next: ../explained/bidiintro.md
+---
+
 # Welcome to online directionality flipping
 
 **Welcome to rtl.wtf, the site that will flip your brain and let you experience and experiment with right-to-left directionality online.**

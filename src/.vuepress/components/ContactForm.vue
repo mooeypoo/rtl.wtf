@@ -1,22 +1,69 @@
 <template>
-  <form name="contact" method="POST" data-netlify-recaptcha="true" data-netlify="true" netlify>
-    <div class="contact-section contact-email">
-      <label for="email">Email:</label>
-      <input type="email" name="email" class="contact-email" placeholder="your@email.com" />
-    </div>
+  <v-app>
+    <v-form
+      name="contact"
+      method="POST"
+      data-netlify-recaptcha="true"
+      data-netlify="true"
+      netlify
+      v-model="valid"
+    >
+      <v-text-field
+        v-model="email"
+        :rules="emailRules"
+        name="email"
+        label="Email"
+      ></v-text-field>
 
-    <div class="contact-section contact-message">
-      <label for="message">Message:</label>
-      <textarea name="message" class="contact-message"></textarea>
-    </div>
-    
-    <div data-netlify-recaptcha="true"></div>
-    
-    <div class="contact-send">
-      <button class="contact-button" type="submit">Send</button>
-    </div>
-  </form>
+      <v-select
+        v-model="select"
+        :items="items"
+        :rules="[v => !!v || 'Please select...']"
+        label="I'd like to..."
+        required
+      ></v-select>
+
+      <div data-netlify-recaptcha="true"></div>
+      
+      <v-textarea
+        v-model="message"
+        :rules="[v => !!v || 'Message is required...']"
+        name="message"
+        label="Message"
+      ></v-textarea>
+
+      <v-btn
+        :disabled="!valid"
+        type="submit"
+        color="primary"
+        elevation="2"
+        x-large
+      >Submit</v-btn>
+    </v-form>
+  </v-app>
 </template>
+
+<script>
+export default {
+  name: 'ContactForm',
+  data: () => ({
+    valid: true,
+    message: '',
+    email: '',
+    emailRules: [
+      v => !!v || 'E-mail is required',
+      v => /.+@.+\..+/.test(v) || 'E-mail must be valid',
+    ],
+    select: null,
+    items: [
+      'Request a speaking opportunity',
+      'Connect or networking',
+      'Consultation',
+      'Other',
+    ],
+  })
+}
+</script>
 
 <style scoped>
 form {
