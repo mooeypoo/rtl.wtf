@@ -6,7 +6,7 @@ module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
-  title: 'RTL:WTF',
+  title: process.env.SITE_DIR === 'ltr' ? 'LTR:WTF' : 'RTL:WTF',
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
