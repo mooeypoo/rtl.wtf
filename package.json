@@ -26,6 +26,7 @@
     "vuepress": "^1.5.3",
     "vuepress-plugin-social-share": "^1.0.0",
     "vuepress-theme-default-rtl": "^1.0.1",
-    "vuetify": "^2.5.0"
+    "vuetify": "^2.5.0",
+    "postcss": ">=8.2.10"
   }
 }
