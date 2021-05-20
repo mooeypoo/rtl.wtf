@@ -38,8 +38,12 @@ module.exports = {
     lastUpdated: true,
     nav: [
       {
-        text: 'RTL Explained',
+        text: 'Resources',
         link: '/explained/',
+      },
+      {
+        text: 'Talks',
+        link: '/talks/',
       },
       {
         text: 'Contact',
@@ -53,12 +57,25 @@ module.exports = {
     sidebar: {
       '/explained/': [
         {
-          title: 'RTL Explained',
+          title: 'Resources',
           collapsable: false,
           children: [
             '',
             'bidiintro',
             'rtlhistory'
+          ]
+        }
+      ],
+      '/talks/': [
+        {
+          title: 'Talks and Presentations',
+          collapsable: false,
+          children: [
+            '',
+            '2018-08-23-BiDi-WAT',
+            '2017-10-30-Strangeloop',
+            '2016-11-02-linux-conf-au',
+            '2015-11-02-Wikimedia'
           ]
         }
       ],
