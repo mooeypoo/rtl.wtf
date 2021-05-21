@@ -53,7 +53,7 @@ export default {
 
       this.$site.pages
         .filter(page => page.frontmatter.type === this.type)
-        .sort((a,b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date))
+        .sort((a,b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date))
         .forEach(page => {
           posts.push({
             title: page.title,

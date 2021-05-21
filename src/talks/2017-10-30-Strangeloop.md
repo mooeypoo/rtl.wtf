@@ -1,3 +1,9 @@
+---
+type: talk
+image: /talks/2017-10-30-Strangeloop.png
+summary: A general-audience lecture about how supporting RTL improves the general UX of your software
+date: 10 October, 2017
+---
 # StrangeLoop 2017: Wait, it does ??THAW
 
 ## Summary

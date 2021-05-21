@@ -57,7 +57,7 @@ module.exports = {
     sidebar: {
       '/explained/': [
         {
-          title: 'Resources',
+          title: 'RTL Explained',
           collapsable: false,
           children: [
             '',

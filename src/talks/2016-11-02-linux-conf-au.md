@@ -1,3 +1,9 @@
+---
+type: talk
+image: /talks/2016-11-02-linux-conf-au.png
+summary: A history and overview of the twisted road to RTL support
+date: 2 November, 2016
+---
 # LCA: Wait, ?tahW
 
 Wait Wait, ?tahW: The Twisted Road to Right-to-Left Language Support

@@ -6,7 +6,7 @@ tags:
   - mobile
 permalink: /wild/mangled-subject-gmail
 image: /inthewild/mangled-subject-gmail-gmail-inbox-rtl-bidi-mobile-arrows.png
-date: March 11, 2016
+date: 11 March, 2016
 prev: /inthewild/
 sidebar: auto
 ---

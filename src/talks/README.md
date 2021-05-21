@@ -4,3 +4,4 @@ This is a list of talks and presentations about Unicode BiDi and Right-to-Left s
 
 Want me to speak in your event? [Talk to me!](/contact)
 
+<PostList type="talk" />

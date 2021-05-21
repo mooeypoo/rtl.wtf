@@ -1,3 +1,9 @@
+---
+type: talk
+image: /talks/2015-11-02-Wikimedia.png
+summary: A presentation given at the Wikimedia Foundation offices
+date: 2 November, 2015
+---
 # Wikimedia: The Twisted Road to RTL Support
 
 ## Summary

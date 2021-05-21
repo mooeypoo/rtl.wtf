@@ -6,7 +6,7 @@ tags:
   - mangled
 permalink: /wild/mixed-content-terminal
 image: /inthewild/mixed-content-terminal-sql_rtl_result-atom.png
-date: November 19, 2016
+date: 19 November, 2016
 sidebar: auto
 prev: /inthewild/
 ---
