@@ -1,39 +1,41 @@
 <template>
-  <ParentLayout>
-    <template #page-bottom>
-      <v-app class="footer-vuetify-app">
-        <v-footer
-          class="pa-2"
-          color="primary lighten-5"
-          padless
-          fixed
-        >
-          <v-row
-            justify="center"
-            align="center"
-            no-gutters
+  <v-app>
+    <ParentLayout>
+      <template #page-bottom>
+        <v-app class="footer-vuetify-app">
+          <v-footer
+            class="pa-2"
+            color="primary lighten-5"
+            padless
+            fixed
           >
-            <v-col
-              class="white--text"
-              :class="switchButtonClass"
+            <v-row
+              justify="center"
+              align="center"
+              no-gutters
             >
-
-              <v-btn
-                small
-                text
-                :href="switchButtonHref"
+              <v-col
+                class="white--text"
+                :class="switchButtonClass"
               >
-                <v-icon>{{ switchButtonIcon }}</v-icon>
-                {{ switchButtonText }}
-                <v-icon>{{ switchButtonIcon }}</v-icon>
-              </v-btn>
 
-            </v-col>
-          </v-row>
-        </v-footer>
-      </v-app>
-    </template>
-  </ParentLayout>
+                <v-btn
+                  small
+                  text
+                  :href="switchButtonHref"
+                >
+                  <v-icon>{{ switchButtonIcon }}</v-icon>
+                  {{ switchButtonText }}
+                  <v-icon>{{ switchButtonIcon }}</v-icon>
+                </v-btn>
+
+              </v-col>
+            </v-row>
+          </v-footer>
+        </v-app>
+      </template>
+    </ParentLayout>
+  </v-app>
 </template>
 
 <script>
@@ -55,7 +57,7 @@ export default {
       return SITE_IS_RTL ? 'text-left' : 'text-right'
     },
     switchButtonHref() {
-      return (SITE_IS_RTL ? 'https://ltr.wtf' : 'https://rtl.wtf') + this.$page.regularPath
+      return (SITE_IS_RTL ? 'https://ltr.wtf' : 'https://rtl.wtf') + this.$page.path
     }
   }
 }

@@ -46,13 +46,13 @@ module.exports = {
         link: '/talks/',
       },
       {
+        text: 'BiDi in the Wild',
+        link: '/inthewild/',
+      },
+      {
         text: 'Contact',
         link: '/contact/'
-      },
-      // {
-      //   text: process.env.SITE_DIR === 'ltr' ? '[ CHANGE TO RTL ]' : '[ CHANGE TO LTR ]',
-      //   link: 'https://v1.vuepress.vuejs.org'
-      // }
+      }
     ],
     sidebar: {
       '/explained/': [
@@ -79,12 +79,6 @@ module.exports = {
           ]
         }
       ],
-      // fallback
-      '/': [
-        '',
-        '/contact/',
-        '/intro/'
-      ]
     }
   },
   configureWebpack: {
@@ -106,6 +100,22 @@ module.exports = {
     '@vuepress/plugin-back-to-top',
     '@vuepress/plugin-medium-zoom',
     '@vuepress/last-updated',
-    'social-share'
+    'social-share',
+    '@vuepress/blog', {
+      sitemap: {
+        hostname: process.env.SITE_DIR === 'ltr' ? 'https://rtl.wtf' : 'https://rtl.wtf'
+      },
+      directories: [
+        {
+          // Unique ID of current classification
+          id: 'inthewild',
+          // Target directory
+          dirname: '_inthewild',
+          // Path of the `entry page` (or `list page`)
+          path: '/inthewild/',
+          itemPermalink: '/inthewild/:slug',
+        }
+      ]
+    }
   ]
 }

@@ -19,14 +19,18 @@
   "license": "MIT",
   "devDependencies": {
     "@mdi/font": "^5.9.55",
+    "@vuepress/plugin-blog": "^1.9.4",
     "@vuepress/theme-default": "^1.8.2",
     "deepmerge": "^4.2.2",
+    "postcss": ">=8.2.10",
     "sass": "^1.32.13",
     "sass-loader": "^11.1.1",
     "vuepress": "^1.5.3",
     "vuepress-plugin-social-share": "^1.0.0",
     "vuepress-theme-default-rtl": "^1.0.1",
-    "vuetify": "^2.5.0",
-    "postcss": ">=8.2.10"
+    "vuetify": "^2.5.0"
+  },
+  "dependencies": {
+    "vue-tweet-embed": "^2.4.0"
   }
 }
