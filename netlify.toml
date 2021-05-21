@@ -1,0 +1,29 @@
+[[redirects]]
+from = "/explained/intro-bidirectional-algorithm/"
+to = "/explained/bidiintro.html"
+status = 301
+
+[[redirects]]
+from = "/explained/rtl-support-history/"
+to = "/explained/rtlhistory.html"
+status = 301
+
+[[redirects]]
+from = "/booboos/children-1-to-41-years-old/"
+to = "/wild/children-1-to-41/"
+status = 301
+
+[[redirects]]
+from = "/booboos/problem-user-generated-content-plaintext/"
+to = "/wild/mixed-content-terminal/"
+status = 301
+
+[[redirects]]
+from = "/booboos/gmail-on-mobile-jumbled-hebrew-with-numbers-and-inbox-tag/"
+to = "/wild/mangled-subject-gmail/"
+status = 301
+
+[[redirects]]
+from = "/tac/booboos/"
+to = "/inthewild/"
+status = 301
