@@ -97,25 +97,28 @@ module.exports = {
    * Apply plugins，ref：https://v1.vuepress.vuejs.org/zh/plugin/
    */
   plugins: [
-    '@vuepress/plugin-back-to-top',
-    '@vuepress/plugin-medium-zoom',
-    '@vuepress/last-updated',
+    ['@vuepress/plugin-back-to-top', {}],
+    ['@vuepress/plugin-medium-zoom', {}],
+    ['@vuepress/last-updated',{}],
     'social-share',
-    '@vuepress/blog', {
+    ['seo', {
+
+    }],
+    ['@vuepress/blog', {
       sitemap: {
         hostname: process.env.SITE_DIR === 'ltr' ? 'https://rtl.wtf' : 'https://rtl.wtf'
-      },
-      directories: [
-        {
-          // Unique ID of current classification
-          id: 'inthewild',
-          // Target directory
-          dirname: '_inthewild',
-          // Path of the `entry page` (or `list page`)
-          path: '/inthewild/',
-          itemPermalink: '/inthewild/:slug',
-        }
-      ]
-    }
+      }
+      // directories: [
+      //   {
+      //     // Unique ID of current classification
+      //     id: 'inthewild',
+      //     // Target directory
+      //     dirname: '_inthewild',
+      //     // Path of the `entry page` (or `list page`)
+      //     path: '/inthewild/',
+      //     itemPermalink: '/inthewild/:slug',
+      //   }
+      // ]
+    }]
   ]
 }

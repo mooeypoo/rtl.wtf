@@ -26,6 +26,7 @@
     "sass": "^1.32.13",
     "sass-loader": "^11.1.1",
     "vuepress": "^1.5.3",
+    "vuepress-plugin-seo": "^0.1.4",
     "vuepress-plugin-social-share": "^1.0.0",
     "vuepress-theme-default-rtl": "^1.0.1",
     "vuetify": "^2.5.0"
