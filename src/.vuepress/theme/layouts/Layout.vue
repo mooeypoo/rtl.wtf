@@ -71,4 +71,17 @@ export default {
 main.page {
   padding-bottom: 4rem;
 }
+
+/* Overrides */
+
+.v-application--is-rtl .sidebar {
+  /* Correction to 'translate(-100%)' in the RTL template */
+  transform: translate(100%);  
+}
+
+.v-application--is-rtl .sidebar .nav-links .nav-item,
+.v-application--is-rtl .sidebar .nav-links .repo-link {
+  /* Flip the padding */
+  padding: 0.5rem 1.5rem 0.5rem 0;
+}
 </style>
