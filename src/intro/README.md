@@ -49,5 +49,6 @@ It was important for me to demonstrate RTL issues, and for that purpose, I built
 * The content on this website is licensed under Creative Commons [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode).
 * The website behavior and content is [available in the github repository](https://github.com/mooeypoo/rtl.wtf) -- Contributions, pull requests and bug reports are welcome!
 * Any and all code snippets are shared under [MIT license](https://opensource.org/licenses/MIT) unless otherwise specified. While it's not mandatory to reshare, please consider sharing any solutions you're tweaking -- for the benefit of the community!
+* Fav icon by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
 
 If you do use anything on this site in your work, I’d be happy if you let me know!

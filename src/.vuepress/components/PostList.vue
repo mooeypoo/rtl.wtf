@@ -80,6 +80,11 @@ export default {
   margin-left: 20px;
 }
 
+.v-application--is-rtl .postlist .post-item:not(:first-child) {
+  margin-left: 0;
+  margin-right: 20px;
+}
+
 .postlist .post-item .v-card__title {
   word-break: break-word;
 }

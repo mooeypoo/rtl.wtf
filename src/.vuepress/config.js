@@ -21,7 +21,11 @@ module.exports = {
     ['meta', { name: 'theme-color', content: '#3eaf7c' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
     ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
-    ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons'}]
+    ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons'}],
+
+    ['link', { rel: "icon", type: "image/png", sizes: "32x32", href: "ico-shuffle-32x32.png"}],
+    ['link', { rel: "icon", type: "image/png", sizes: "16x16", href: "ico-shuffle-16x16.png"}],
+    ['link', { rel: "shortcut icon", href: "favicon.ico"}],    
   ],
 
   // globalLayout: '/.viepress/theme/layouts/GlobalLayout.vue',
