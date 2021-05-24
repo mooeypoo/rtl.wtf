@@ -1,5 +1,8 @@
-const { description } = require('../../package')
 const webpack = require('webpack');
+const meta = (name, content, props = {}) => {
+  return ['meta', { name, content, ...props }]
+}
+const ogprefix = 'og: http://ogp.me/ns#'
 
 module.exports = {
   theme: process.env.SITE_DIR === 'ltr' ? '' : 'default-rtl',
@@ -10,7 +13,7 @@ module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
-  description: description,
+  description: "A one-stop-shop for explanation about Right to Left languages online.",
 
   /**
    * Extra tags to be injected to the page HTML `<head>`
@@ -36,9 +39,11 @@ module.exports = {
    */
   themeConfig: {
     repo: 'https://github.com/mooeypoo/rtl.wtf',
-    editLinks: false,
+    domain: process.env.SITE_DIR === 'ltr' ? 'https://ltr.wtf' : 'https://rtl.wtf',
+    author: 'Moriel Schottlender',
+    editLinks: true,
     docsDir: '',
-    editLinkText: '',
+    editLinkText: 'Suggest changes to this page',
     lastUpdated: true,
     nav: [
       {
@@ -106,7 +111,11 @@ module.exports = {
     ['@vuepress/last-updated',{}],
     'social-share',
     ['seo', {
-
+      image: ($page, $site) => {
+        const image = $page.frontmatter.image || '/angry_tiger-640px.jpg'
+        return !image.startsWith('https') ? $site.themeConfig.domain + image : image
+      },
+      description: $page => $page.frontmatter.summary || 'A one-stop-shop for explanation about Right to Left languages online.',
     }],
     ['@vuepress/blog', {
       sitemap: {
