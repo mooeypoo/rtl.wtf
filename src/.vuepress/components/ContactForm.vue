@@ -22,7 +22,7 @@
       method="POST"
       @submit.prevent="onSubmit"
       data-netlify="true"
-      data-netlify-honeypot="bot-field"
+      data-netlify-recaptcha="true"
       netlify
       v-model="valid"
     >
