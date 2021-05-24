@@ -6,6 +6,18 @@ next: ../explained/bidiintro.md
 
 **Welcome to rtl.wtf, the site that will flip your brain and let you experience and experiment with right-to-left directionality online.**
 
+<div style="text-align:center">
+
+![An angry cat that looks like a tiger](/angry_tiger-640px.jpg)
+
+<span style="font-size: 0.8em;"><a href="https://commons.wikimedia.org/wiki/File:Angry_tiger.jpg">Guyon Morée from Beverwijk, Netherlands</a>, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a>, via Wikimedia Commons</span>
+
+**_This website may make your head spin. Here's an angry tiger to help._**
+
+
+</div>
+
+
 ## WTF?!
 
 Yeah, so, by now you’ve realized that the alignment of this page is a wee bit off. If you’ve cheated and went to ltr.wtf (tsk tsk) then you may see things a bit more normal, or rather, a bit more like you are used to seeing them: from left to right.

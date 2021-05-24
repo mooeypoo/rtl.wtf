@@ -1,6 +1,6 @@
 ---
 home: true
-# heroImage: https://v1.vuepress.vuejs.org/hero.png
+heroImage: /angry_tiger-640px.jpg
 tagline: Read the web like Right-to-Left readers do, and learn about the challenges — and how to help solve them.
 actionText: What is this? →
 actionLink: /intro/
