@@ -32,6 +32,7 @@
     "vuetify": "^2.5.0"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "vue-tweet-embed": "^2.4.0"
   }
 }

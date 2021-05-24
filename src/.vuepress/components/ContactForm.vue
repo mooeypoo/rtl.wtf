@@ -1,13 +1,32 @@
 <template>
   <v-app>
+    <v-alert
+      v-if="successful"
+      dense
+      text
+      type="success"
+    >
+      Your message was sent! Thank you!
+    </v-alert>
+    <v-alert
+      v-if="failure"
+      dense
+      text
+      type="error"
+    >
+      We couldn't sent your message. Maybe something was missing?
+    </v-alert>
     <v-form
+      v-if="!successful"
       name="contact"
       method="POST"
-      data-netlify-recaptcha="true"
+      @submit.prevent="onSubmit"
       data-netlify="true"
+      data-netlify-honeypot="bot-field"
       netlify
       v-model="valid"
     >
+      <input type="hidden" name="form-name" value="contact" />
       <v-text-field
         v-model="email"
         :rules="emailRules"
@@ -44,10 +63,14 @@
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
   name: 'ContactForm',
   data: () => ({
     valid: true,
+    successful: false,
+    failure: false,
     message: '',
     email: '',
     emailRules: [
@@ -61,7 +84,31 @@ export default {
       'Consultation',
       'Other',
     ],
-  })
+  }),
+  methods: {
+    onSubmit () {
+      axios.post(
+        '/',
+        {
+          method: 'POST',
+          body: new URLSearchParams({
+            'form-name': 'contact',
+            email: this.email,
+            topic: this.select,
+            message: this.message
+          }).toString()
+        },
+        {
+          header: { "Content-Type": "application/x-www-form-urlencoded" },
+        }
+      )
+        .then(() => this.successful = true)
+        .catch((error) => {
+          this.failure = true
+          console.log('Netlify form error', error);
+        })
+    }
+  }
 }
 </script>
 
