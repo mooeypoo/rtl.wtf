@@ -79,9 +79,12 @@ textarea {
   padding: 5px;
 }
 
-.v-application--is-rtl .sidebar {
-  /* Correction to 'translate(-100%)' in the RTL template */
-  transform: translate(100%);  
+/* only under 720px */
+@media screen and (max-width: 720px) {
+  .v-application--is-rtl .sidebar {
+    /* Correction to 'translate(-100%)' in the RTL template */
+    transform: translate(100%);
+  }
 }
 
 .v-application--is-rtl .sidebar .nav-links .nav-item,
