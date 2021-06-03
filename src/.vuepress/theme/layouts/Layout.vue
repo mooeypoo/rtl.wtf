@@ -73,6 +73,11 @@ main.page {
 }
 
 /* Overrides */
+textarea {
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  padding: 5px;
+}
 
 .v-application--is-rtl .sidebar {
   /* Correction to 'translate(-100%)' in the RTL template */
