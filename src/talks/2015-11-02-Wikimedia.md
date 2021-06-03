@@ -13,5 +13,5 @@ This talk will demonstrate the challenges that the web poses for Right to Left l
 
 ## Video
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/qmLdHuFRGgM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe class="wtfvideo" src="https://www.youtube-nocookie.com/embed/qmLdHuFRGgM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

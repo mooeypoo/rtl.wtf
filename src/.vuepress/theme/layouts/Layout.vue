@@ -72,6 +72,19 @@ main.page {
   padding-bottom: 4rem;
 }
 
+/* youtube embeds */
+.wtfvideo {
+  width: 560px;
+  height: 315px;
+}
+
+@media screen and (max-width: 420px) {
+.wtfvideo {
+  width: 320px;
+  height: 180px;
+}
+}
+
 /* Overrides */
 textarea {
   border: 1px solid #cccccc;

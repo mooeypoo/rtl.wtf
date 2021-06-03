@@ -12,7 +12,7 @@ This lecture was given in linux.conf.au Conference 2016 in Australia, introducin
 
 ## Video
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/OCQd02hORJQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe class="wtfvideo" src="https://www.youtube-nocookie.com/embed/OCQd02hORJQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Summary
 
