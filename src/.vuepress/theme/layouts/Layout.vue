@@ -92,6 +92,13 @@ textarea {
   padding: 5px;
 }
 
+/** RTL override for social share */
+.v-application--is-rtl + .global-ui .social-share-global {
+  right: auto !important;
+  left: 0 !important;
+  border-radius: 0 8px 8px 0 !important;
+}
+
 /* only under 720px */
 @media screen and (max-width: 720px) {
   .v-application--is-rtl .sidebar {
