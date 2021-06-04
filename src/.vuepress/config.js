@@ -41,8 +41,8 @@ module.exports = {
     repo: 'https://github.com/mooeypoo/rtl.wtf',
     domain: process.env.SITE_DIR === 'ltr' ? 'https://ltr.wtf' : 'https://rtl.wtf',
     author: 'Moriel Schottlender',
-    editLinks: true,
-    docsDir: '',
+    docsDir: 'src',
+    editLinks: false,
     editLinkText: 'Suggest changes to this page',
     lastUpdated: true,
     nav: [
@@ -51,12 +51,16 @@ module.exports = {
         link: '/explained/',
       },
       {
-        text: 'Talks',
-        link: '/talks/',
+        text: 'Intro to BiDi',
+        link: '/explained/bidiintro.md',
       },
       {
         text: 'BiDi in the Wild',
         link: '/inthewild/',
+      },
+      {
+        text: 'Talks',
+        link: '/talks/',
       },
       {
         text: 'Contact',
@@ -66,12 +70,28 @@ module.exports = {
     sidebar: {
       '/explained/': [
         {
-          title: 'RTL Explained',
+          title: 'Resources',
           collapsable: false,
           children: [
-            '',
+            ''
+          ]
+        },
+        {
+          title: 'RTL Explained',
+          collapsable: true,
+          children: [
             'bidiintro',
             'rtlhistory'
+          ]
+        },
+        {
+          title: 'RTL Talks',
+          collapsable: true,
+          children: [
+            '/talks/2018-08-23-BiDi-WAT',
+            '/talks/2017-10-30-Strangeloop',
+            '/talks/2016-11-02-linux-conf-au',
+            '/talks/2015-11-02-Wikimedia'
           ]
         }
       ],

@@ -1,4 +1,4 @@
-# RTL explained
+# RTL Resources
 
 Right-to-Left languages exist, but supporting them isn't always easy or straight forward. The mere attempt to do so, though, can improve both the user experience but also, generally, the UX of most applications &mdash; even those that do not have translations and are English-only.
 
@@ -6,4 +6,16 @@ Here you can get some general and specific information about Right-to-Left langu
 
 This section includes some explanations, demonstration and experiments that demonstrate RTL harships and solutions.
 
+## RTL explained articles
+
+- [Introduction to the BiDirectional Algorithm](./bidiintro.md)
+- [History of RTL support online](./rtlhistory.md)
+
+## Talks and presentations
+
 Make sure to check out the [talks section](/talks/) for live talks that cover many of the written concepts.
+
+## Other resources
+
+- [RTL.WORKS: Test your website RTL support](http://rtl.works)
+- [RTL styling 101](https://rtlstyling.com/posts/rtl-styling)
