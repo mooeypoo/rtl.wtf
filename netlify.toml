@@ -27,3 +27,8 @@ status = 301
 from = "/tac/booboos/"
 to = "/inthewild/"
 status = 301
+
+[[redirects]]
+from = "/request-a-talk/"
+to = "/contact/"
+status = 301
