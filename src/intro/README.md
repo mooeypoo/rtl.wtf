@@ -45,7 +45,7 @@ RTL users are growing online. Here are a couple of numbers to convince you that 
   * **Arabic** is Right-to-Left. There are about 19 Arabic-speaking countries in the world with combined population close to 350 million speakers.
   * **Farsi** (spoken primarily but not exclusively in Iran) has about 110 million speakers.
   * **Urdu** (spoken in Pakistan and parts of India) has about 65 million native speakers and 94 million second-language speakers.
-  * **Pashto** (spoken primarily in Afghanistan) has almost 20 million speakers.
+  * **Pashto** (spoken in Afghanistan and Pakistan) has about 20 million native speakers.
   * **Hebrew** (spoken primarily in Israel) is spoken by about 9 million people.
   * To those keeping track, this is over **half a billion people**, and we're not even done with the RTL language list.
 * Unicode supports it and includes a “Bidirectional Algorithm” out of the box, so, I mean, really. There’s no reason your software shouldn’t.
