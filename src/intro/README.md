@@ -54,7 +54,7 @@ RTL users are growing online. Here are a couple of numbers to convince you that 
 ## About this site
 This site is built to demonstrate and explain directionality issues online. It’s still being built and worked-on, so please be patient while I add to it.
 
-It was important for me to demonstrate RTL issues, and for that purpose, I built a little “tool” to flip things for you, in the shape of the ‘RTL’ and ‘LTR’ buttons on the top: If you want to read the content in RTL (recommended, for best experience) then you can either go to rtl.wtf or click the “RTL” button up top. If you chicken-out and want your good ol’ favorite LTR layout, go to ltr.wtf or click the “LTR” button on the top.
+It was important for me to demonstrate RTL issues, and for that purpose, I built a little “tool” to flip things for you, in the shape of the blue link at the bottom: If you want to read the content in RTL (recommended, for best experience) then you can either go to rtl.wtf or click the 'give me the RTL experience' button at the bottom. If you chicken-out and want your good ol’ favorite LTR layout, go to ltr.wtf or click on 'this breaks my brain. switch to LTR'.
 
 ## License and sharing
 
