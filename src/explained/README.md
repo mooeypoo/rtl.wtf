@@ -6,6 +6,11 @@ Here you can get some general and specific information about Right-to-Left langu
 
 This section includes some explanations, demonstration and experiments that demonstrate RTL harships and solutions.
 
+## RTL tools, helpers and demos
+
+- [Multi-string bidirectional isolation](./tools/multistringisolation.md)
+
+
 ## RTL explained articles
 
 - [Introduction to the BiDirectional Algorithm](./bidiintro.md)
