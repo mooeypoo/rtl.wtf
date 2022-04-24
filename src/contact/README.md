@@ -4,6 +4,8 @@ I'm always happy to talk about Right-to-Left support and language-accessible UX 
 
 **I am available for public speaking and conference talk opportunities.**
 
+The best way to contact me is [**through my website!**](https://moriel.tech)
+
 ## I'm online!
 
 You can find me online --
@@ -23,12 +25,7 @@ However, if you must write an email, I do have that option!
 
 **PLEASE NOTE** This website is Open Source, free of charge, and has no user login.
 
-Before sending me a solicitation email to your awesome service, please consider:
-
-* **I am not interested** in SEO help, or any paid subscriptions helping "spread the word" or "get more users."
-* **I am not interested** in blog post exchanges to promote your blog with unrelated content
-
-All emails of these nature are thrown to spam, and may be reported as spam to the spam-algorithms :heart:
+Please do not send me any solicitation for paid subscription services or unrelated content.
 
 </v-alert>
 

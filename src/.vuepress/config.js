@@ -77,6 +77,13 @@ module.exports = {
           ]
         },
         {
+          title: 'RTL Tools & Demos',
+          collapsable: true,
+          children: [
+            'tools/multistringisolation'
+          ]
+        },
+        {
           title: 'RTL Explained',
           collapsable: true,
           children: [
