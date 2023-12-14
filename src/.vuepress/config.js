@@ -55,13 +55,17 @@ module.exports = {
         link: '/explained/bidiintro.md',
       },
       {
-        text: 'BiDi in the Wild',
+        text: 'Examples',
         link: '/inthewild/',
       },
       {
-        text: 'Talks',
-        link: '/talks/',
+        text: 'Experience',
+        link: '/experience/',
       },
+      // {
+      //   text: 'Talks',
+      //   link: '/talks/',
+      // },
       {
         text: 'Contact',
         link: '/contact/'
@@ -102,19 +106,28 @@ module.exports = {
           ]
         }
       ],
-      '/talks/': [
+      '/experience/': [
         {
-          title: 'Talks and Presentations',
+          title: 'Experience BiDi',
           collapsable: false,
           children: [
-            '',
-            '2018-08-23-BiDi-WAT',
-            '2017-10-30-Strangeloop',
-            '2016-11-02-linux-conf-au',
-            '2015-11-02-Wikimedia'
+            ''
           ]
-        }
+        },
       ],
+      // '/talks/': [
+      //   {
+      //     title: 'Talks and Presentations',
+      //     collapsable: false,
+      //     children: [
+      //       '',
+      //       '2018-08-23-BiDi-WAT',
+      //       '2017-10-30-Strangeloop',
+      //       '2016-11-02-linux-conf-au',
+      //       '2015-11-02-Wikimedia'
+      //     ]
+      //   }
+      // ],
     }
   },
   configureWebpack: {
